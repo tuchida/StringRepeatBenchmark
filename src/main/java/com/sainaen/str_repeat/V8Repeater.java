@@ -1,4 +1,4 @@
-package com.sainaen;
+package com.sainaen.str_repeat;
 
 public class V8Repeater implements  Repeater {
 

@@ -1,9 +1,6 @@
-package com.sainaen;
+package com.sainaen.str_repeat;
 
-import org.apache.commons.math3.analysis.function.Abs;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 public class V8RepeaterTest extends AbstractRepeaterTest {
 

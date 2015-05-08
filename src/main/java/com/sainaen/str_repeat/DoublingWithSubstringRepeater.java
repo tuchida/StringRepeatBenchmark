@@ -1,6 +1,6 @@
-package com.sainaen;
+package com.sainaen.str_repeat;
 
-public class DoublingRepeater implements Repeater {
+public class DoublingWithSubstringRepeater implements Repeater {
 
     @Override
     public String repeat(String s, int cnt) {
@@ -20,9 +20,15 @@ public class DoublingRepeater implements Repeater {
         retval.append(s);
 
         int i = 1;
-        for (; i <= cnt/2; i*=2) retval.append(retval);
-        while (i++ < cnt) retval.append(s);
+        while (i <= cnt/2) {
+            retval.append(retval);
+            i *= 2;
+        }
+
+        if (i < cnt) {
+            retval.append(retval.substring(0, s.length() * (cnt - i)));
+        }
+
         return retval.toString();
     }
-
 }

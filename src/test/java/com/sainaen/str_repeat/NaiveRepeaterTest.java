@@ -1,4 +1,4 @@
-package com.sainaen;
+package com.sainaen.str_repeat;
 
 import org.junit.Test;
 
