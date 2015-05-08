@@ -34,29 +34,35 @@ package com.sainaen.benchmark;
 import com.sainaen.DoublingRepeater;
 import com.sainaen.NaiveRepeater;
 import com.sainaen.NaiveRepeaterPreallocated;
+import com.sainaen.V8Repeater;
 import org.openjdk.jmh.annotations.Benchmark;
 import org.openjdk.jmh.annotations.Fork;
-import org.openjdk.jmh.infra.Blackhole;
+import org.openjdk.jmh.annotations.Scope;
+import org.openjdk.jmh.annotations.State;
 
-@Fork(3)
+@Fork(5)
+@State(Scope.Thread)
 public class MyBenchmark {
+    String s = "aabbccddeeff";
+    int n = 10000;
 
     @Benchmark
-    public void testMethod_Naive(Blackhole bh) {
-        String s = "aabbccddeeff";
-        bh.consume(NaiveRepeater.repeat(s, 10000));
+    public String testMethod_Naive() {
+        return new NaiveRepeater().repeat(s, n);
     }
 
     @Benchmark
-    public void testMethod_NaivePrealloc(Blackhole bh) {
-        String s = "aabbccddeeff";
-        bh.consume(NaiveRepeaterPreallocated.repeat(s, 10000));
+    public String testMethod_NaivePrealloc() {
+        return new NaiveRepeaterPreallocated().repeat(s, n);
     }
 
+    @Benchmark
+    public String testMethod_Doubling() {
+        return new DoublingRepeater().repeat(s, n);
+    }
 
     @Benchmark
-    public void testMethod_Doubling(Blackhole bh) {
-        String s = "aabbccddeeff";
-        bh.consume(DoublingRepeater.repeat(s, 10000));
+    public String testMethod_V8() {
+        return new V8Repeater().repeat(s, n);
     }
 }

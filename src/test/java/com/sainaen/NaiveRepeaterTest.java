@@ -2,15 +2,10 @@ package com.sainaen;
 
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
-
-public class NaiveRepeaterTest {
-    String s = "aabbccddeeff";
+public class NaiveRepeaterTest extends AbstractRepeaterTest {
 
     @Test
     public void testRepeat() throws Exception {
-        assertEquals(NaiveRepeater.repeat(s, 0), "");
-        assertEquals(NaiveRepeater.repeat(s, 1), s);
-        assertEquals(NaiveRepeater.repeat(s, 3), s + s + s);
+        testRepeater(new NaiveRepeater());
     }
 }

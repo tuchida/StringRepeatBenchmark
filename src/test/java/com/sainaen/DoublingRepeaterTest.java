@@ -5,14 +5,11 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class DoublingRepeaterTest {
-    String s = "aabbccddeeff";
+public class DoublingRepeaterTest extends AbstractRepeaterTest {
 
     @Test
     public void testRepeat() throws Exception {
-        assertEquals(DoublingRepeater.repeat(s, 0), "");
-        assertEquals(DoublingRepeater.repeat(s, 1), s);
-        assertEquals(DoublingRepeater.repeat(s, 3), s + s + s);
+        testRepeater(new DoublingRepeater());
     }
 
 }

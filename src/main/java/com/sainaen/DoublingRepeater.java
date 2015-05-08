@@ -1,7 +1,9 @@
 package com.sainaen;
 
-public class DoublingRepeater {
-    public static String repeat(String s, int cnt) {
+public class DoublingRepeater implements Repeater {
+
+    @Override
+    public String repeat(String s, int cnt) {
         if (cnt == 0) {
             return "";
         }
@@ -22,4 +24,5 @@ public class DoublingRepeater {
         while (i++ < cnt) retval.append(s);
         return retval.toString();
     }
+
 }
