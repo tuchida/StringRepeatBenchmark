@@ -1,7 +1,7 @@
 To run, execute in project folder:
 ```
 $ mvn clean install
-$ java -jar target/benchmark.jar
+$ java -jar target/benchmarks.jar
 ```
 
 ## Results
@@ -15,7 +15,7 @@ Java(TM) SE Runtime Environment (build 1.6.0_45-b06)
 Java HotSpot(TM) 64-Bit Server VM (build 20.45-b01, mixed mode)
 
 
-$ java -jar target/benchmark.jar
+$ java -jar target/benchmarks.jar
 <...>
 
 Benchmark                                      Mode  Cnt     Score     Error  Units
@@ -35,7 +35,7 @@ Java(TM) SE Runtime Environment (build 1.8.0_45-b14)
 Java HotSpot(TM) 64-Bit Server VM (build 25.45-b02, mixed mode)
 
 
-$ java -jar target/benchmark.jar
+$ java -jar target/benchmarks.jar
 <...>
 
 Benchmark                                      Mode  Cnt      Score     Error  Units
