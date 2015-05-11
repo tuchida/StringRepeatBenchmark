@@ -36,4 +36,9 @@ public class MyBenchmark {
     public String testMethod_V8() {
         return new V8Repeater().repeat(s, n);
     }
+
+    @Benchmark
+    public String testMethod_ArrayCopy_DoublingWithSubstring() {
+        return new ArrayCopy_DoublingWithSubstringRepeater().repeat(s, n);
+    }
 }

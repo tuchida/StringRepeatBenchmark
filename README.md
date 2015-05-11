@@ -38,10 +38,11 @@ Java HotSpot(TM) 64-Bit Server VM (build 25.45-b02, mixed mode)
 $ java -jar target/benchmarks.jar
 <...>
 
-Benchmark                                      Mode  Cnt      Score     Error  Units
-MyBenchmark.testMethod_Doubling               thrpt  100  10606.817 ± 231.937  ops/s
-MyBenchmark.testMethod_DoublingWithSubstring  thrpt  100  13422.023 ± 230.671  ops/s
-MyBenchmark.testMethod_Naive                  thrpt  100   4217.410 ±  83.808  ops/s
-MyBenchmark.testMethod_NaivePrealloc          thrpt  100   5156.276 ±  95.651  ops/s
-MyBenchmark.testMethod_V8                     thrpt  100   7266.410 ± 137.244  ops/s
+Benchmark                                                Mode  Cnt      Score     Error  Units
+MyBenchmark.testMethod_ArrayCopy_DoublingWithSubstring  thrpt  100  19215.778 ± 178.935  ops/s
+MyBenchmark.testMethod_Doubling                         thrpt  100  15285.772 ± 155.174  ops/s
+MyBenchmark.testMethod_DoublingWithSubstring            thrpt  100  17511.073 ± 150.687  ops/s
+MyBenchmark.testMethod_Naive                            thrpt  100   6093.978 ±  85.496  ops/s
+MyBenchmark.testMethod_NaivePrealloc                    thrpt  100   7999.695 ± 140.291  ops/s
+MyBenchmark.testMethod_V8                               thrpt  100   9644.282 ±  80.012  ops/s
 ```
